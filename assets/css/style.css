@@ -1,0 +1,258 @@
+    body {
+      margin: 0;
+    }
+    *{
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      position: fixed;
+      top: 56px;
+      left: 0;
+      background-color: #fff;
+      border-right: 1px solid #dee2e6;
+      transition: all 0.3s;
+      overflow-y: auto;
+      z-index: 1020;
+    }
+    .sidebar a{
+        font-size: 14px;
+        color: #068a50;
+    }
+    .sidebar a:hover{
+        color: #046b3ea1;
+        background-color: #068a5149;
+    }
+    .sidebar a.active{
+        background-color: #068a5149;
+    }
+    .sidebar.hide {
+      margin-left: -220px;
+    }
+    .sidebar .nav .nav-item
+    {
+        min-height: 54px;
+    }
+    .header {
+      height: 56px;
+      background-color: #fff;
+      border-bottom: 1px solid #dee2e6;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      z-index: 1030;
+    }
+    .content {
+      margin-left: 220px;
+      margin-top: 56px;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+    .content.full {
+      margin-left: 0;
+    }
+    .search-box {
+      max-width: 400px;
+      width: 100%;
+    }
+    /* Mobile & Tablet: Hide sidebar by default */
+    @media (max-width: 991.98px) {
+      .content {
+        margin-left: 0;
+      }
+      .sidebar.hide{
+        margin-left: -400px;
+      }
+    }
+    .text-white{
+        color: #fff;
+    }
+    .text-black{
+        color: #000;
+    }
+    .bg-green{
+        background-color: #ffffffa8 !important;
+    }
+    .bg-primary{
+        background-color: #068a50 !important;
+    }
+
+    /* styles */
+    
+  .page-section {
+   display: none;
+    }
+  .page-section.active {
+    display: block;
+    }
+
+
+    /* Dashboard Grid and Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.stat-card:hover{
+   background-color: #c6fde6;
+  cursor: pointer;
+}
+
+.stat-card h6 {
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+.status.registered {
+  color: green;
+  font-weight: bold;
+}
+
+.dashboard-section {
+  margin-top: 2rem;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.course-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.course-card:hover{
+  background-color: #c6fde6;
+  cursor: pointer;
+
+}
+
+.tma-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tma-list li {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: .5rem;
+  padding: .75rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.announcement-card, .ticket-card {
+  background: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+/* Semester registration Wizard styling */
+.wizard-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 500px;
+}
+
+.wizard-step {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-control {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.badge.success {
+  background: green;
+  color: #fff;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+}
+
+.badge.warning {
+  background: orange;
+  color: #fff;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+}
+
+.alert.success {
+  background: #e6f9e8;
+  border: 1px solid green;
+  padding: .75rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.btn:hover{
+  background-color:  #c6fde6;
+}
+.btn.next-btn{
+  background-color: #068a50;
+}
+.btn.small.success.float-end{
+  color: white;
+  background-color:  #068a50;
+}
+
+
+
+
+
+
+
+
+footer{
+  text-align: center;
+  color: #c6fde6;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  background-color: #064d2fce;
+  padding: 5px;
+  margin: 10px;
+
+}
