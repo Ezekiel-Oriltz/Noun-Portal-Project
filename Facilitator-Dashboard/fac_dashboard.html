@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facilitator Dashboard</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header d-flex align-items-center bg-primary">
+    <div class="d-flex align-items-center">
+      <button id="toggleBtn" class="btn me-2 bg-green">
+        <i class="bi bi-list"></i>
+      </button>
+      <span class="fw-bold fs-5 text-white">Facilitator Portal</span>
+    </div>
+
+    <form class="search-box d-none d-md-block">
+      <input type="text" class="form-control bg-green" placeholder="Search...">
+    </form>
+
+    <div class="d-flex align-items-center">
+      <button class="btn position-relative me-3 p-1 bg-green" style="font-size: 12px;">
+        <i class="bi bi-bell fs-5"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">4</span>
+      </button>
+
+      <div class="dropdown">
+        <button class="btn dropdown-toggle d-flex align-items-center p-1 text-white" type="button" data-bs-toggle="dropdown">
+          <i class="bi bi-person-circle fs-4 me-2"></i>
+          <span class="d-none d-md-inline">Dr. Williams</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i> Settings</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <ul class="nav flex-column pt-3">
+      <li class="nav-item">
+        <a class="nav-link active" href="fac_dashboard.html">
+          <i class="fas fa-home me-2"></i> Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fac_courses.html">
+          <i class="fas fa-book-open me-2"></i> My Courses
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fac_materials.html">
+          <i class="fas fa-folder-open me-2"></i> Materials
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fac_assessment.html">
+          <i class="fas fa-tasks me-2"></i> Assessments
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fac_grading.html">
+          <i class="fas fa-pen me-2"></i> Grading
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fac_announcements.html">
+          <i class="fas fa-bullhorn me-2"></i> Announcements
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fac_tickets.html">
+          <i class="fas fa-headset me-2"></i> Tickets
+        </a>
+      </li>
+    </ul>
+  </div>
+
+    <!-- Facilitator Dashboard Widgets -->
+    <main id="mainContent" class="content">
+      <h2 class="mb-4">Welcome, Dr. Williams</h2>
+      <p class="text-muted">Here are your teaching updates for this semester:</p>
+
+      <!-- Summary Cards -->
+      <div class="stats-grid mb-4">
+        <!-- Teaching Assignments -->
+        <div class="stat-card">
+          <h6>Teaching Assignments</h6>
+          <p>CIT401 - Software Engineering</p>
+          <p>CIT403 - Operating Systems</p>
+        </div>
+
+        <!-- Upcoming Grading Tasks -->
+        <div class="stat-card">
+          <h6>Upcoming Grading Tasks</h6>
+          <p>3 TMAs to grade</p>
+          <small>Next due: Sept 25</small>
+        </div>
+
+        <!-- Student Engagement -->
+        <div class="stat-card">
+          <h6>Student Engagement</h6>
+          <p>42 Submissions Pending</p>
+          <p>5 Discussions Active</p>
+        </div>
+
+        <!-- Recent Tickets -->
+        <div class="stat-card">
+          <h6>Recent Tickets</h6>
+          <p>2 New Support Requests</p>
+          <small>Last: Password reset issue</small>
+        </div>
+      </div>
+
+      <!-- Expanded Sections -->
+      <section class="dashboard-section">
+        <h4>Teaching Assignments</h4>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Level</th>
+              <th>Students Enrolled</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CIT401</td>
+              <td>Software Engineering</td>
+              <td>400L</td>
+              <td>150</td>
+            </tr>
+            <tr>
+              <td>CIT403</td>
+              <td>Operating Systems</td>
+              <td>400L</td>
+              <td>132</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="dashboard-section">
+        <h4>Upcoming Grading Tasks</h4>
+        <ul class="list-group">
+          <li class="list-group-item">CIT401 - TMA 1 (45 submissions pending)</li>
+          <li class="list-group-item">CIT403 - Quiz 2 (32 submissions pending)</li>
+          <li class="list-group-item">CIT401 - TMA 2 (Due Sept 30)</li>
+        </ul>
+      </section>
+
+      <section class="dashboard-section">
+        <h4>Student Engagement</h4>
+        <div class="alert alert-info">42 pending submissions across courses.</div>
+        <div class="alert alert-warning">5 active discussion forums need attention.</div>
+      </section>
+
+      <section class="dashboard-section">
+        <h4>Recent Tickets</h4>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <strong>Matric: NOU2023/001</strong> - Issue: "Cannot access TMA"
+          </li>
+          <li class="list-group-item">
+            <strong>Matric: NOU2023/056</strong> - Issue: "Portal login error"
+          </li>
+        </ul>
+      </section>
+    </main>
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+  <footer>
+    NATIONAL OPEN UNIVERSITY OF NIGERIA - Facilitator Portal. All Rights Reserved &copy;2025
+  </footer>
+</body>
+</html>
